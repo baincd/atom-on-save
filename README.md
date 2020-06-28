@@ -28,6 +28,17 @@ For example, if you want to babelify every `.js` file from `src` to `dist`, the 
 ]
 ```
 
+Or if you would like to commit `.md` files on every save
+```json
+[
+  {
+    "srcDir": ".",
+    "files": "**/*.md",
+    "command": "git add ${srcFile} && (git commit -m \"Saved File ${srcFile}\" || true)"
+  }
+]
+```
+
 ## Configuration file
 
 The content of the `.on-save.json` file must be an array of objects with the following properties:
