@@ -3,7 +3,7 @@
 import {existsSync, readFileSync} from 'fs';
 import {join, relative, dirname, extname} from 'path';
 import {exec} from 'child_process';
-import {CompositeDisposable} from 'atom';
+import {CompositeDisposable, Directory} from 'atom';
 import minimatch from 'minimatch';
 import mkdirp from 'mkdirp';
 
@@ -34,6 +34,15 @@ export default {
     for (const config of configs) {
       this.run({rootDir, config, savedFile});
     }
+    this.refreshGit(savedFileDir);
+  },
+
+  refreshGit(rootDir) {
+    atom.project.repositoryForDirectory(new Directory(rootDir)).then( (repo) => {
+        if (repo != null) {
+         repo.refreshStatus();
+       }
+    });
   },
 
   findRootDir(dir) {
