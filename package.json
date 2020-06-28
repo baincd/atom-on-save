@@ -1,7 +1,7 @@
 {
   "name": "on-save",
   "version": "2.2.1",
-  "description": "Run a shell command when you save a file",
+  "description": "Run a shell command when you save a file.  Forked from mvila's on-save, adding refresh of git status in tree view",
   "keywords": [
     "save",
     "file",
@@ -15,7 +15,7 @@
     "execute",
     "shell"
   ],
-  "repository": "https://github.com/mvila/on-save",
+  "repository": "https://github.com/baincd/atom-on-save",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

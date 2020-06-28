@@ -5,6 +5,11 @@
   <br />
 </p>
 
+## Baincd's on-save
+A fork of [mvila's on-save](https://github.com/mvila/on-save) with the following enhancements
+
+* Refresh git repo on save
+
 ## Installation
 
 ```
